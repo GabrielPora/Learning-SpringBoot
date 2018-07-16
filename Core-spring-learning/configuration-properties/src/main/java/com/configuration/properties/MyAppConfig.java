@@ -1,4 +1,4 @@
-package com.therealdanvega;
+package com.configuration.properties;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;

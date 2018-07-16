@@ -1,4 +1,4 @@
-package com.therealdanvega;
+package com.configuration.properties;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
