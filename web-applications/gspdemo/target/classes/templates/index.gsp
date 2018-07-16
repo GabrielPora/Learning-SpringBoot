@@ -5,7 +5,7 @@
 </head>
 <body>
 
-    <h3>Accessing the model...</h3>
+    <h3>Accessing the model</h3>
     Hello, ${name}.
 
     <h3>Iteration with a scriptlet</h3>
