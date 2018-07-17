@@ -1,0 +1,18 @@
+[Exercise] Building a CRUD Application
+Section 9, Lecture 82
+
+In this exercise we are going to build on the CRUD application we used in this section. We walked through on how create / read / update / delete for the posts domain object. Take the knowledge and do the following for the Author domain object.
+
+Exercise
+
+    Create an Admin Author Controller
+    List Authors / Show Authors
+    Create Author
+    Add Validation
+    Update Author
+    Delete Author
+
+Bonus
+
+    How can we display the number of posts each author has created.
+    If we delete an author what happens to their posts?
