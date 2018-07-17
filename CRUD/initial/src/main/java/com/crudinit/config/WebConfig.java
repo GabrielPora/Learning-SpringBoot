@@ -15,12 +15,14 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		super.addViewControllers(registry);
         registry.addViewController("/login").setViewName("auth/login");
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
+        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);		
 	}
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new BaseInterceptor());
 	}
+	
+	
 	
 }
