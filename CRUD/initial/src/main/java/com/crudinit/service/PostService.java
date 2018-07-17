@@ -42,4 +42,7 @@ public class PostService {
 		return postRepository.save(post);
 	}
 	
+	public void delete(Long id) {
+		postRepository.delete(id);
+	}
 }

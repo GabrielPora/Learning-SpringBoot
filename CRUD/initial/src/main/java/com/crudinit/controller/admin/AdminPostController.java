@@ -2,7 +2,6 @@ package com.crudinit.controller.admin;
 
 import javax.validation.Valid;
 
-//import org.neo4j.cypher.internal.compiler.v2_1.commands.expressions.PathValueBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
@@ -11,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.crudinit.domain.Post;
 import com.crudinit.service.AuthorService;
@@ -64,10 +64,17 @@ public class AdminPostController {
 	}
 	
 	@RequestMapping("/admin/post/edit/{id}")
-	public String edit(@PathVariable Long id, Model model) {
+	public String edit(@PathVariable Long id, Model model){
 		model.addAttribute("post", postService.get(id));
-		model.addAttribute("authors", authorService.list());		
-		return "admin/post/postForm";
+		model.addAttribute("authors", authorService.list());
+		return "admin/post/postForm";		
+	}
+	
+	@RequestMapping("/admin/post/delete/{id}")
+	public String delete(@PathVariable Long id, RedirectAttributes redirectAttrs) {
+		postService.delete(id);
+		redirectAttrs.addFlashAttribute("message", "Post was deleted!");
+		return "redirect:/admin/posts";
 	}
 	
 }
